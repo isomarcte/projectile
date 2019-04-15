@@ -2650,6 +2650,9 @@ test/impl/other files as below:
                                   :test-suffix "_test")
 (projectile-register-project-type 'clojure-cli '("deps.edn")
                                   :test-suffix "_test")
+(projectile-register-project-type 'bloop '(".bloop")
+                                  :compile "bloop compile root"
+                                  :test "bloop test --propagate --reporter scalac root")
 ;; Ruby
 (projectile-register-project-type 'ruby-rspec '("Gemfile" "lib" "spec")
                                   :compile "bundle exec rake"
